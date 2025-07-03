@@ -25,30 +25,6 @@ public class Wagon {
         this(speed, speedLimits, 1);
     }
 
-    public boolean isBooleanValid() {
-        for (int i = 0; i < setSpeed.length; i++) {
-            short currentSpeed = setSpeed[i];
-
-            if (currentSpeed == -1)
-                continue;
-
-            short limit;
-            int number;
-            if (i == 0) {
-                limit = speed.getSpeedLimitByIndex(indexAlternativeSpeedLimit);
-                number = indexAlternativeSpeedLimit;
-            } else {
-                limit = speed.getSpeedLimitByIndex(i + 1);
-                number = i + 1;
-            }
-
-            if (limit != -1 && limit < currentSpeed) {
-                return false;
-            }
-        }
-        return true;
-    }
-    
     public String isStringValid() {
         for (int i = 0; i < setSpeed.length; i++) {
             short currentSpeed = setSpeed[i];
