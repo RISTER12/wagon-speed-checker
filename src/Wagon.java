@@ -48,6 +48,7 @@ public class Wagon {
         }
         return true;
     }
+    
     public String isStringValid() {
         for (int i = 0; i < setSpeed.length; i++) {
             short currentSpeed = setSpeed[i];
